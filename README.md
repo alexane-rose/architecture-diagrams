@@ -1,6 +1,11 @@
 # Architecture Diagrams
 Architecture Diagrams to deploy resources in AWS (Diagrams as code)✏️
 
+## Running the repo
+To run this repository use `make init` to get graphviz and install the required libraries.
+To generate the charts run `make diagrams`. The diagrams are defined in code in the directory `diagram_as_code/`.
+
+## In this repo...
 In this repo you can find diagrams defined in code describing the following architecture blocks :
 - ETL pipeline using glue
 - Lambda function to process data manually added by a user
