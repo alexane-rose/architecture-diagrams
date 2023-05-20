@@ -31,7 +31,7 @@ with Diagram(filename, show= False, direction="LR", outformat="png", filename = 
         schedule_rotation >> API_user >> API_user_secret >> rotation_event >> lambda_fn
         lambda_fn << Edge(style='dotted') << tableau_user_secret
 
-    with Cluster("Tableau"):
+    with Cluster("Tableau Online"):
         data_connection = GenericDatabase("Data Connection")
 
     lambda_fn >> data_connection
