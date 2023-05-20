@@ -2,8 +2,9 @@
 Architecture Diagrams to deploy resources in AWS (Diagrams as code)✏️
 
 ## Running the repo
-To run this repository use `make init` to get graphviz and install the required libraries.
-To generate the charts run `make diagrams`. The diagrams are defined in code in the directory `diagram_as_code/`.
+- To run this repository use `make init` to get graphviz and install the required libraries.
+- To generate the charts run `make diagrams`.
+- The diagrams are defined in code in the directory `diagram_as_code/`.
 
 ## In this repo...
 In this repo you can find diagrams defined in code describing the following architecture blocks :
@@ -35,3 +36,7 @@ Steps :
 3. Create a scheduled event to trigger the key rotation and save new keys in secret managers.
 4. On key rotation an event triggers a lambda function
 5. The lambda functions
+
+### Real Time Machine Learning Model deployment
+
+![alt text](https://github.com/alexane-rose/architecture-diagrams/blob/main/output/real_time_ML_deployment.png?raw=true)
