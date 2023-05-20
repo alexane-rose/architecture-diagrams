@@ -14,7 +14,7 @@ graph_attr = {
     "bgcolor": "white"
 }
 
-with Diagram(filename, show= False, direction="TB", outformat="png", filename = f"output/{filename}", graph_attr=graph_attr):
+with Diagram(filename, show= False, direction="LR", outformat="png", filename = f"output/{filename}", graph_attr=graph_attr):
     athena = Athena("Athena")
     event = CloudwatchEventTimeBased("Scheduled Trigger")
 
