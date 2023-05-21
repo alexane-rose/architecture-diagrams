@@ -8,6 +8,7 @@ from diagrams.aws.integration import Eventbridge
 from diagrams.aws.security import SecretsManager
 from diagrams.aws.security import IdentityAndAccessManagementIam as IAM
 from diagrams.aws.general import GenericDatabase
+from diagrams.aws.analytics import LakeFormation
 
 import os
 
@@ -31,10 +32,11 @@ with Diagram(
         athena = Athena("Athena")
         lambda_fn = Lambda("Update Credentials")
         tableau_user_secret = SecretsManager("Tableau User")
+        lake_formation = LakeFormation("Lake Formation")
 
+        lake_formation  >> API_user
         schedule_rotation >> API_user >> API_user_secret >> rotation_event >> lambda_fn
         lambda_fn << Edge(style="dotted") << tableau_user_secret
-
     with Cluster("Tableau Online"):
         data_connection = GenericDatabase("Data Connection")
 
