@@ -40,5 +40,5 @@ Steps :
 ### Real-Time Machine Learning Model Deployment
 A Machine Learning model deployment for real-time inference requires two main building blocks: the training and the inference pipeline.
 The first  can be built in AWS Sagemaker with the folowing steps: data preprocessing and model traing, creation and registration. The model is sent to an API gateway to interfance with the inference.
-The second, is a lambda function that takes an input delivered through a user-facing API gateway. The lambda function then processes the input,  queries the API endpoint hosting the ML model and return an output to the user. Additionaly, the response is stored in DynamoDb for further analytics.
+The second, is a lambda function that takes an input delivered through a user-facing API gateway. The lambda function then processes the input,  queries the API endpoint hosting the ML model and returns an output to the user. Additionaly, the response is stored in DynamoDb for further analytics.
 ![alt text](https://github.com/alexane-rose/architecture-diagrams/blob/main/output/real_time_ML_deployment.png?raw=true)
